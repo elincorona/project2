@@ -38,7 +38,7 @@ def main(argv):
 
     device_count = {'GPU': 1} if FLAGS.use_gpu else {'GPU': 0}
     sess_config = tf.ConfigProto(device_count=device_count)
-    sess_config.gpu_options.per_process_gpu_memory_fraction = 0.2
+    sess_config.gpu_options.per_process_gpu_memory_fraction = 75
     sess_config.gpu_options.allow_growth = True
     sess_config.allow_soft_placement = True
     with tf.Session(config=sess_config) as sess:
@@ -156,7 +156,7 @@ def main(argv):
                 joint_coord_set = np.zeros((FLAGS.num_of_joints, 2))
 
                 for joint_num in range(FLAGS.num_of_joints):
-                    # Concat until 4 img
+
                     if (joint_num % 4) == 0 and joint_num != 0:
                         vertical_imgs.append(tmp_img)
                         tmp_img = None
