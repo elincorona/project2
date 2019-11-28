@@ -36,8 +36,8 @@ class CPM_Model(CPM):
         self._build_model()
 
     def _build_model(self):
-        # with tf.variable_scope('pooled_center_map'):
-        #     self.center_map = tf.layers.average_pooling2d(inputs=self.cmap_placeholder,
+        #with tf.variable_scope('pooled_center_map'):
+        #   self.center_map = tf.layers.average_pooling2d(inputs=self.cmap_placeholder,
         #                                                   pool_size=[9, 9],
         #                                                   strides=[8, 8],
         #                                                   padding='same',
