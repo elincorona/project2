@@ -5,7 +5,7 @@ import tensorflow as tf
 from models.nets import cpm_hand_slim
 import numpy as np
 from utils import cpm_utils
-import cv2
+import opencv as cv2
 import time
 import math
 import sys
