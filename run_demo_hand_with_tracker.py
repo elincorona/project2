@@ -1,7 +1,7 @@
 import tensorflow as tf
 import numpy as np
 from utils import cpm_utils, tracking_module, utils
-import opencv 
+import cv2
 import time
 import math
 import importlib
@@ -382,4 +382,4 @@ def draw_hand(full_img, joint_coords, is_loss_track):
 
 
 if __name__ == '__main__':
-        tf.app.run()
+    tf.app.run()
